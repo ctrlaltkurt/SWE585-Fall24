@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class MoveableObjectScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+        // Move the object up when the 'W' key is pressed
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(Vector3.up * Time.deltaTime * 5);
+        }
     }
 }
+
